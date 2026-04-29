@@ -1,0 +1,27 @@
+{
+  "name": "OpenClaw AI Agent Workspace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  
+  "forwardPorts": [18789],
+  "portsAttributes": {
+    "18789": {
+      "label": "OpenClaw Dashboard",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "npm install -g openclaw@latest",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "humao.rest-client"
+      ]
+    }
+  }
+}
